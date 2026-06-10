@@ -143,7 +143,6 @@ function forme_scripts() {
 	wp_style_add_data( 'forme-style', 'rtl', 'replace' );
 	wp_enqueue_style( 'additional-style', get_template_directory_uri() . '/additional/additional.css', array(), 1.1 );
 
-	wp_enqueue_script( 'forme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'forme-script', get_template_directory_uri() . '/assets/dist/js/app.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'additional-script', get_template_directory_uri() . '/additional/additional.js', array(), _S_VERSION, true );
 
@@ -154,11 +153,6 @@ function forme_scripts() {
 add_action( 'wp_enqueue_scripts', 'forme_scripts' );
 
 /**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
@@ -167,18 +161,6 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
 
 add_filter( 'upload_mimes', 'svg_upload_allow' );
 
