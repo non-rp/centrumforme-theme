@@ -1,126 +1,118 @@
 <?php
 /*
-Template Name: For parents
-Template Post Type:  page
+Template Name: Szkolenia dla rodziców
+Template Post Type: page
 */
+
+defined( 'ABSPATH' ) || exit;
+
 get_header();
 ?>
 
 <section class="heading">
-    <div class="heading__container">
-        <h2 class="heading__title title">
-            Szkolenia dla rodziców
-        </h2>
-        <div class="heading__desc">
-            Oparte na doświadczeniu zebranym w pracy indywidualnej i grupowej z dziećmi, <br>
-            młodzieżą oraz rodzicami.
-        </div>
-    </div>
+	<div class="heading__container">
+		<h2 class="heading__title title">
+			<?php esc_html_e( 'Szkolenia dla rodziców', 'forme' ); ?>
+		</h2>
+		<div class="heading__desc">
+			<?php esc_html_e( 'Oparte na doświadczeniu zebranym w pracy indywidualnej i grupowej z dziećmi, młodzieżą oraz rodzicami.', 'forme' ); ?>
+		</div>
+	</div>
 </section>
 
-<section class="webinars">
-    <div class="webinars__container">
-        <h2 class="webinars__title title">
-            Webinary
-        </h2>
+<?php
+$forme_webinars = new WP_Query(
+	array(
+		'post_type'      => 'training',
+		'posts_per_page' => -1,
+		'orderby'        => array(
+			'menu_order' => 'ASC',
+			'date'       => 'ASC',
+		),
+		'tax_query'      => array(
+			array(
+				'taxonomy' => 'training_audience',
+				'field'    => 'slug',
+				'terms'    => 'rodzice',
+			),
+		),
+		'meta_query'     => array(
+			array(
+				'key'   => 'training_type',
+				'value' => 'webinar',
+			),
+		),
+	)
+);
 
-        <div class="webinars__items">
-            <div class="webinars__item webinars-item">
-                <div class="webinars-item__top">
-                    <div class="webinars-item__icon"><img src="/wp-content/uploads/2022/10/webinars.svg" alt=""> </div>
-                    <div class="webinars-item__info">
-                        <h3 class="webinars-item__name">O co walczy nastolatek?</h3>
-                        <p class="webinars-item__type">Nagranie video</p>
-                    </div>
-                </div>
-                <div class="webinars-item__buttons">
-                    <a href="" data-popup="#popup-webinary-7" class="webinars-item__button button --border">Dowiedz się więcej</a>
-                    <!-- <a href="" class="webinars-item__button button --green">Kup webinar</a> -->
-                </div>
-            </div>
+if ( $forme_webinars->have_posts() ) :
+	?>
+	<section class="webinars">
+		<div class="webinars__container">
+			<h2 class="webinars__title title"><?php esc_html_e( 'Webinary', 'forme' ); ?></h2>
+			<div class="webinars__items">
+				<?php
+				while ( $forme_webinars->have_posts() ) :
+					$forme_webinars->the_post();
+					get_template_part( 'template-parts/components/card', 'webinar' );
+				endwhile;
+				wp_reset_postdata();
+				?>
+			</div>
+		</div>
+	</section>
+	<?php
+endif;
 
-            <div class="webinars__item webinars-item">
-                <div class="webinars-item__top">
-                    <div class="webinars-item__icon"><img src="/wp-content/uploads/2022/10/webinars2.svg" alt=""></div>
-                    <div class="webinars-item__info">
-                        <h3 class="webinars-item__name">Co robić, kiedy dziecko nie może się skupić?</h3>
-                        <p class="webinars-item__type">Nagranie video</p>
-                    </div>
-                </div>
-                <div class="webinars-item__buttons">
-                    <a href="" data-popup="#popup-webinary-8" class="webinars-item__button button --border">Dowiedz się więcej</a>
-                    <!-- <a href="" class="webinars-item__button button --green">Kup webinar</a> -->
-                </div>
+$forme_trainings = new WP_Query(
+	array(
+		'post_type'      => 'training',
+		'posts_per_page' => -1,
+		'orderby'        => array(
+			'menu_order' => 'ASC',
+			'date'       => 'ASC',
+		),
+		'tax_query'      => array(
+			array(
+				'taxonomy' => 'training_audience',
+				'field'    => 'slug',
+				'terms'    => 'rodzice',
+			),
+		),
+		'meta_query'     => array(
+			'relation' => 'OR',
+			array(
+				'key'   => 'training_type',
+				'value' => 'szkolenie',
+			),
+			array(
+				'key'     => 'training_type',
+				'compare' => 'NOT EXISTS',
+			),
+		),
+	)
+);
 
-            </div>
+if ( $forme_trainings->have_posts() ) :
+	?>
+	<section class="appointmetn">
+		<div class="appointmetn__container">
+			<h2 class="appointmetn__title title"><?php esc_html_e( 'Szkolenia', 'forme' ); ?></h2>
+			<p class="appointmetn__desc description">
+				<?php esc_html_e( 'Przeprowadzane są w formie warsztatowej (online lub stacjonarnie).', 'forme' ); ?>
+			</p>
+			<div class="appointmetn__grid">
+				<?php
+				while ( $forme_trainings->have_posts() ) :
+					$forme_trainings->the_post();
+					get_template_part( 'template-parts/components/card', 'training' );
+				endwhile;
+				wp_reset_postdata();
+				?>
+			</div>
+		</div>
+	</section>
+	<?php
+endif;
 
-        </div>
-
-    </div>
-</section>
-
-<section class="appointmetn">
-    <div class="appointmetn__container">
-        <h2 class="appointmetn__title title">
-            Szkolenia
-        </h2>
-        <p class="appointmetn__desc description">
-            Przeprowadzane są w formie warsztatowej (online lub stacjonarnie).
-        </p>
-
-        <div class="appointmetn__grid">
-            <div class="appointmetn__item">
-                <div class="appointmetn__img"><img src="/wp-content/uploads/2022/10/page-4-img1.jpg" alt=""></div>
-                <div class="appointmetn__info">
-                    <h3 class="appointmetn__name">Depresja u dzieci i młodzieży</h3>
-                    <a href="" data-popup="#popup-webinary-1" class="appointmetn__button">Dowiedz się więcej</a>
-                </div>
-            </div>
-
-            <div class="appointmetn__item">
-                <div class="appointmetn__img"><img src="/wp-content/uploads/2022/10/page-4-img.jpg" alt=""></div>
-                <div class="appointmetn__info">
-                    <h3 class="appointmetn__name">Samoocena</h3>
-                    <a href="" data-popup="#popup-webinary-2" class="appointmetn__button">Dowiedz się więcej</a>
-                </div>
-            </div>
-
-            <div class="appointmetn__item">
-                <div class="appointmetn__img"><img src="/wp-content/uploads/2022/10/page-4-img3.jpg" alt=""></div>
-                <div class="appointmetn__info">
-                    <h3 class="appointmetn__name">Uzależnienie od komputera</h3>
-                    <a href="" data-popup="#popup-webinary-3" class="appointmetn__button">Dowiedz się więcej</a>
-                </div>
-            </div>
-
-            <div class="appointmetn__item">
-                <div class="appointmetn__img"><img src="/wp-content/uploads/2022/10/page-4-img4.jpg" alt=""></div>
-                <div class="appointmetn__info">
-                    <h3 class="appointmetn__name">Stres i trudne sytuacje dziecka</h3>
-                    <a href="" data-popup="#popup-webinary-4" class="appointmetn__button">Dowiedz się więcej</a>
-                </div>
-            </div>
-
-            <div class="appointmetn__item">
-                <div class="appointmetn__img"><img src="/wp-content/uploads/2022/10/page-4-img5.jpg" alt=""></div>
-                <div class="appointmetn__info">
-                    <h3 class="appointmetn__name">Jak rozmawiać z nastolatkiem?</h3>
-                    <a href="" data-popup="#popup-webinary-5" class="appointmetn__button">Dowiedz się więcej</a>
-                </div>
-            </div>
-
-            <div class="appointmetn__item">
-                <div class="appointmetn__img"><img src="/wp-content/uploads/2022/10/page-4-img6.jpg" alt=""></div>
-                <div class="appointmetn__info">
-                    <h3 class="appointmetn__name">Zmiana zachowania czy nawyku nastolatka (również związanego z używaniem ekranów)</h3>
-                    <a href="" data-popup="#popup-webinary-6" class="appointmetn__button">Dowiedz się więcej</a>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-<?php get_footer();
+get_footer();
