@@ -1,0 +1,471 @@
+{
+    "key": "group_forme_front_page",
+    "title": "Strona główna",
+    "fields": [
+        {
+            "key": "field_forme_fp_hero",
+            "label": "Hero",
+            "name": "hero",
+            "type": "group",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_forme_fp_hero_title",
+                    "label": "Tytuł",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "Dozwolone proste tagi (np. <span>, <br>)."
+                },
+                {
+                    "key": "field_forme_fp_hero_desc",
+                    "label": "Opis",
+                    "name": "description",
+                    "type": "textarea",
+                    "rows": 3
+                },
+                {
+                    "key": "field_forme_fp_hero_btn_label",
+                    "label": "Przycisk — tekst",
+                    "name": "button_label",
+                    "type": "text"
+                },
+                {
+                    "key": "field_forme_fp_hero_btn_url",
+                    "label": "Przycisk — URL",
+                    "name": "button_url",
+                    "type": "url"
+                },
+                {
+                    "key": "field_forme_fp_hero_image",
+                    "label": "Obrazek",
+                    "name": "image",
+                    "type": "image",
+                    "return_format": "array",
+                    "preview_size": "medium"
+                }
+            ]
+        },
+        {
+            "key": "field_forme_fp_benefits",
+            "label": "Zalety",
+            "name": "benefits",
+            "type": "repeater",
+            "layout": "row",
+            "button_label": "Dodaj zaletę",
+            "sub_fields": [
+                {
+                    "key": "field_forme_fp_benefit_icon",
+                    "label": "Ikona",
+                    "name": "icon",
+                    "type": "image",
+                    "return_format": "array",
+                    "preview_size": "thumbnail"
+                },
+                {
+                    "key": "field_forme_fp_benefit_title",
+                    "label": "Tytuł",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_forme_fp_benefit_desc",
+                    "label": "Opis",
+                    "name": "description",
+                    "type": "textarea",
+                    "rows": 2
+                }
+            ]
+        },
+        {
+            "key": "field_forme_fp_services",
+            "label": "Sekcja usług",
+            "name": "services",
+            "type": "group",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_forme_fp_services_title",
+                    "label": "Tytuł",
+                    "name": "title",
+                    "type": "textarea",
+                    "rows": 2
+                },
+                {
+                    "key": "field_forme_fp_services_desc",
+                    "label": "Opis",
+                    "name": "description",
+                    "type": "textarea",
+                    "rows": 3
+                },
+                {
+                    "key": "field_forme_fp_services_items",
+                    "label": "Karty",
+                    "name": "items",
+                    "type": "repeater",
+                    "layout": "row",
+                    "button_label": "Dodaj kartę",
+                    "sub_fields": [
+                        {
+                            "key": "field_forme_fp_service_name",
+                            "label": "Nazwa",
+                            "name": "name",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_forme_fp_service_url",
+                            "label": "URL",
+                            "name": "url",
+                            "type": "url"
+                        },
+                        {
+                            "key": "field_forme_fp_service_image",
+                            "label": "Tło",
+                            "name": "image",
+                            "type": "image",
+                            "return_format": "array",
+                            "preview_size": "medium"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_forme_fp_tags_cloud",
+            "label": "Sekcja „chmura tagów”",
+            "name": "tags_cloud",
+            "type": "group",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_forme_fp_tags_title",
+                    "label": "Tytuł",
+                    "name": "title",
+                    "type": "textarea",
+                    "rows": 2
+                },
+                {
+                    "key": "field_forme_fp_tags_desc",
+                    "label": "Opis",
+                    "name": "description",
+                    "type": "text"
+                },
+                {
+                    "key": "field_forme_fp_tags_image",
+                    "label": "Obrazek",
+                    "name": "image",
+                    "type": "image",
+                    "return_format": "array",
+                    "preview_size": "medium"
+                }
+            ]
+        },
+        {
+            "key": "field_forme_fp_session_info",
+            "label": "Informacje o sesji (czas / cena)",
+            "name": "session_info",
+            "type": "repeater",
+            "layout": "table",
+            "button_label": "Dodaj pozycję",
+            "sub_fields": [
+                {
+                    "key": "field_forme_fp_session_icon",
+                    "label": "Ikona",
+                    "name": "icon",
+                    "type": "image",
+                    "return_format": "array",
+                    "preview_size": "thumbnail"
+                },
+                {
+                    "key": "field_forme_fp_session_label",
+                    "label": "Etykieta",
+                    "name": "label",
+                    "type": "text"
+                },
+                {
+                    "key": "field_forme_fp_session_value",
+                    "label": "Wartość",
+                    "name": "value",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "key": "field_forme_fp_primary_cta",
+            "label": "Główny przycisk (CTA)",
+            "name": "primary_cta",
+            "type": "group",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_forme_fp_primary_cta_label",
+                    "label": "Tekst",
+                    "name": "button_label",
+                    "type": "text"
+                },
+                {
+                    "key": "field_forme_fp_primary_cta_url",
+                    "label": "URL",
+                    "name": "button_url",
+                    "type": "url"
+                }
+            ]
+        },
+        {
+            "key": "field_forme_fp_therapists",
+            "label": "Sekcja o psychoterapeutach",
+            "name": "therapists_section",
+            "type": "group",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_forme_fp_therapists_title",
+                    "label": "Tytuł",
+                    "name": "title",
+                    "type": "textarea",
+                    "rows": 2,
+                    "instructions": "Dozwolone proste tagi (np. <span>)."
+                },
+                {
+                    "key": "field_forme_fp_therapists_desc",
+                    "label": "Opis",
+                    "name": "description",
+                    "type": "textarea",
+                    "rows": 4
+                },
+                {
+                    "key": "field_forme_fp_therapists_image",
+                    "label": "Obrazek",
+                    "name": "image",
+                    "type": "image",
+                    "return_format": "array",
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_forme_fp_therapists_btn_label",
+                    "label": "Przycisk — tekst",
+                    "name": "button_label",
+                    "type": "text"
+                },
+                {
+                    "key": "field_forme_fp_therapists_btn_url",
+                    "label": "Przycisk — URL",
+                    "name": "button_url",
+                    "type": "url"
+                }
+            ]
+        },
+        {
+            "key": "field_forme_fp_steps",
+            "label": "Kroki (jak korzystać)",
+            "name": "steps",
+            "type": "group",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_forme_fp_steps_title",
+                    "label": "Tytuł",
+                    "name": "title",
+                    "type": "textarea",
+                    "rows": 2
+                },
+                {
+                    "key": "field_forme_fp_steps_items",
+                    "label": "Kroki",
+                    "name": "items",
+                    "type": "repeater",
+                    "layout": "row",
+                    "button_label": "Dodaj krok",
+                    "sub_fields": [
+                        {
+                            "key": "field_forme_fp_step_label",
+                            "label": "Etykieta (np. Krok 1)",
+                            "name": "label",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_forme_fp_step_desc",
+                            "label": "Opis",
+                            "name": "description",
+                            "type": "textarea",
+                            "rows": 2
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_forme_fp_instruction",
+            "label": "Sekcja „przed sesją”",
+            "name": "instruction",
+            "type": "group",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_forme_fp_instruction_title",
+                    "label": "Tytuł",
+                    "name": "title",
+                    "type": "textarea",
+                    "rows": 2
+                },
+                {
+                    "key": "field_forme_fp_instruction_desc",
+                    "label": "Opis",
+                    "name": "description",
+                    "type": "textarea",
+                    "rows": 2
+                },
+                {
+                    "key": "field_forme_fp_instruction_btn",
+                    "label": "Przycisk — tekst",
+                    "name": "button_label",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "key": "field_forme_fp_closing",
+            "label": "Sekcja zamykająca (heading)",
+            "name": "closing_heading",
+            "type": "group",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_forme_fp_closing_title",
+                    "label": "Tytuł",
+                    "name": "title",
+                    "type": "textarea",
+                    "rows": 2
+                },
+                {
+                    "key": "field_forme_fp_closing_desc",
+                    "label": "Opis",
+                    "name": "description",
+                    "type": "textarea",
+                    "rows": 2
+                }
+            ]
+        },
+        {
+            "key": "field_forme_fp_consultation",
+            "label": "Pierwsza konsultacja",
+            "name": "first_consultation",
+            "type": "group",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_forme_fp_consultation_title",
+                    "label": "Tytuł",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_forme_fp_consultation_image",
+                    "label": "Obrazek",
+                    "name": "image",
+                    "type": "image",
+                    "return_format": "array",
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_forme_fp_consultation_items",
+                    "label": "Punkty",
+                    "name": "items",
+                    "type": "repeater",
+                    "layout": "table",
+                    "button_label": "Dodaj punkt",
+                    "sub_fields": [
+                        {
+                            "key": "field_forme_fp_consultation_item",
+                            "label": "Treść",
+                            "name": "text",
+                            "type": "textarea",
+                            "rows": 2
+                        }
+                    ]
+                },
+                {
+                    "key": "field_forme_fp_consultation_btn_label",
+                    "label": "Przycisk — tekst",
+                    "name": "button_label",
+                    "type": "text"
+                },
+                {
+                    "key": "field_forme_fp_consultation_btn_url",
+                    "label": "Przycisk — URL",
+                    "name": "button_url",
+                    "type": "url"
+                }
+            ]
+        },
+        {
+            "key": "field_forme_fp_reviews",
+            "label": "Twórcy portalu (opinie)",
+            "name": "reviews",
+            "type": "group",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_forme_fp_reviews_title",
+                    "label": "Tytuł",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_forme_fp_reviews_desc",
+                    "label": "Cytat / opis",
+                    "name": "description",
+                    "type": "textarea",
+                    "rows": 2
+                },
+                {
+                    "key": "field_forme_fp_reviews_items",
+                    "label": "Osoby",
+                    "name": "items",
+                    "type": "repeater",
+                    "layout": "block",
+                    "button_label": "Dodaj osobę",
+                    "sub_fields": [
+                        {
+                            "key": "field_forme_fp_review_photo",
+                            "label": "Zdjęcie",
+                            "name": "photo",
+                            "type": "image",
+                            "return_format": "array",
+                            "preview_size": "thumbnail"
+                        },
+                        {
+                            "key": "field_forme_fp_review_name",
+                            "label": "Imię i nazwisko",
+                            "name": "name",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_forme_fp_review_text",
+                            "label": "Opis",
+                            "name": "text",
+                            "type": "textarea",
+                            "rows": 4
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "show_in_rest": 0,
+    "modified": 1718200000
+}

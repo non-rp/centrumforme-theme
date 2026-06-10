@@ -20,5 +20,7 @@ define( 'FORME_URI', get_template_directory_uri() );
 
 require FORME_DIR . '/inc/setup.php';             // Theme supports, menus, widget areas.
 require FORME_DIR . '/inc/enqueue.php';            // Front-end styles & scripts.
+require FORME_DIR . '/inc/post-types.php';         // Custom post types & taxonomies.
+require FORME_DIR . '/inc/acf.php';                // ACF JSON sync, options page, helpers.
 require FORME_DIR . '/inc/template-tags.php';      // Custom template tags.
 require FORME_DIR . '/inc/template-functions.php'; // WP hook enhancements + SVG support.

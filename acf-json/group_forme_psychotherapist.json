@@ -1,0 +1,55 @@
+{
+    "key": "group_forme_psychotherapist",
+    "title": "Psychoterapeuta — dane",
+    "fields": [
+        {
+            "key": "field_forme_psy_photo",
+            "label": "Zdjęcie",
+            "name": "photo",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "instructions": "Można też ustawić jako Obrazek wyróżniający."
+        },
+        {
+            "key": "field_forme_psy_subtitle",
+            "label": "Tytuł / podpis",
+            "name": "subtitle",
+            "type": "text",
+            "instructions": "Wiersz pod imieniem, np. „mgr” lub „certyfikat nr 710”."
+        },
+        {
+            "key": "field_forme_psy_bio",
+            "label": "Biogram",
+            "name": "bio",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "media_upload": 0,
+            "instructions": "Pełny opis (wykształcenie, doświadczenie, nurt). Wyświetlany w rozwijanym bloku."
+        },
+        {
+            "key": "field_forme_psy_booking",
+            "label": "Link do rezerwacji",
+            "name": "booking_url",
+            "type": "url"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "psychotherapist"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "show_in_rest": 0,
+    "modified": 1718200000
+}

@@ -1,0 +1,177 @@
+{
+    "key": "group_forme_site_settings",
+    "title": "Ustawienia motywu",
+    "fields": [
+        {
+            "key": "field_forme_set_logo",
+            "label": "Logo",
+            "name": "logo",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "svg,png,jpg,jpeg,webp"
+        },
+        {
+            "key": "field_forme_set_phone",
+            "label": "Telefon",
+            "name": "phone",
+            "type": "text",
+            "instructions": "Wyświetlany numer, np. 500 505 101. Link tel: jest generowany automatycznie."
+        },
+        {
+            "key": "field_forme_set_email",
+            "label": "E-mail",
+            "name": "email",
+            "type": "email"
+        },
+        {
+            "key": "field_forme_set_address",
+            "label": "Adres / miasto",
+            "name": "address",
+            "type": "text"
+        },
+        {
+            "key": "field_forme_set_facebook",
+            "label": "Facebook URL",
+            "name": "facebook_url",
+            "type": "url"
+        },
+        {
+            "key": "field_forme_set_instagram",
+            "label": "Instagram URL",
+            "name": "instagram_url",
+            "type": "url"
+        },
+        {
+            "key": "field_forme_set_header_cta",
+            "label": "Przycisk w nagłówku",
+            "name": "header_cta",
+            "type": "group",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_forme_set_header_cta_label",
+                    "label": "Tekst",
+                    "name": "label",
+                    "type": "text",
+                    "default_value": "Znajdź terapeutę"
+                },
+                {
+                    "key": "field_forme_set_header_cta_url",
+                    "label": "URL",
+                    "name": "url",
+                    "type": "url",
+                    "default_value": "/znajdz-terapeute"
+                }
+            ]
+        },
+        {
+            "key": "field_forme_set_footer_heading",
+            "label": "Footer — nagłówek",
+            "name": "footer_heading",
+            "type": "text",
+            "default_value": "Centrum psychoterapii Forme"
+        },
+        {
+            "key": "field_forme_set_footer_desc",
+            "label": "Footer — opis",
+            "name": "footer_description",
+            "type": "textarea",
+            "rows": 3
+        },
+        {
+            "key": "field_forme_set_footer_form",
+            "label": "Footer — formularz",
+            "name": "footer_form",
+            "type": "group",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_forme_set_footer_form_heading",
+                    "label": "Nagłówek",
+                    "name": "heading",
+                    "type": "text",
+                    "default_value": "Napisz i zarezerwuj wizytę!"
+                },
+                {
+                    "key": "field_forme_set_footer_form_cf7",
+                    "label": "Contact Form 7 — ID",
+                    "name": "cf7_id",
+                    "type": "text",
+                    "instructions": "ID formularza CF7, np. 111."
+                }
+            ]
+        },
+        {
+            "key": "field_forme_set_legal",
+            "label": "Linki prawne (stopka)",
+            "name": "legal_links",
+            "type": "repeater",
+            "layout": "table",
+            "button_label": "Dodaj link",
+            "sub_fields": [
+                {
+                    "key": "field_forme_set_legal_label",
+                    "label": "Etykieta",
+                    "name": "label",
+                    "type": "text"
+                },
+                {
+                    "key": "field_forme_set_legal_url",
+                    "label": "URL",
+                    "name": "url",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "key": "field_forme_set_copyright",
+            "label": "Copyright",
+            "name": "copyright",
+            "type": "text",
+            "default_value": "FORME © All rights reserved 2022"
+        },
+        {
+            "key": "field_forme_set_platform_popup",
+            "label": "Popup — instrukcja platformy",
+            "name": "platform_popup",
+            "type": "group",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_forme_set_platform_popup_title",
+                    "label": "Tytuł",
+                    "name": "title",
+                    "type": "text",
+                    "default_value": "Jak korzystać z platformy ForMe:"
+                },
+                {
+                    "key": "field_forme_set_platform_popup_content",
+                    "label": "Treść",
+                    "name": "content",
+                    "type": "wysiwyg",
+                    "tabs": "all",
+                    "media_upload": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "forme-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "show_in_rest": 0,
+    "modified": 1718200000
+}

@@ -1,0 +1,85 @@
+{
+    "key": "group_forme_training",
+    "title": "Szkolenie — dane",
+    "fields": [
+        {
+            "key": "field_forme_tr_type",
+            "label": "Typ",
+            "name": "training_type",
+            "type": "select",
+            "choices": {
+                "szkolenie": "Szkolenie / warsztat",
+                "webinar": "Webinar"
+            },
+            "default_value": "szkolenie",
+            "return_format": "value",
+            "ui": 1
+        },
+        {
+            "key": "field_forme_tr_desc",
+            "label": "Krótki opis",
+            "name": "short_description",
+            "type": "textarea",
+            "rows": 4,
+            "instructions": "Opis w popupie (głównie dla webinarów)."
+        },
+        {
+            "key": "field_forme_tr_goals",
+            "label": "Cele",
+            "name": "popup_goals",
+            "type": "repeater",
+            "layout": "table",
+            "button_label": "Dodaj cel",
+            "sub_fields": [
+                {
+                    "key": "field_forme_tr_goal_text",
+                    "label": "Treść",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 2
+                }
+            ]
+        },
+        {
+            "key": "field_forme_tr_plan",
+            "label": "Plan szkolenia",
+            "name": "popup_plan",
+            "type": "repeater",
+            "layout": "table",
+            "button_label": "Dodaj punkt",
+            "sub_fields": [
+                {
+                    "key": "field_forme_tr_plan_text",
+                    "label": "Treść",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 2
+                }
+            ]
+        },
+        {
+            "key": "field_forme_tr_form",
+            "label": "Contact Form 7 — ID",
+            "name": "form_id",
+            "type": "text",
+            "instructions": "ID formularza CF7 dla popupu (np. 152 / 110 / 128)."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "training"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "show_in_rest": 0,
+    "modified": 1718200000
+}
