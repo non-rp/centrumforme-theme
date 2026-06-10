@@ -1,54 +1,22 @@
 /*!
 Theme Name: Forme
-Theme URI: http://underscores.me/
-Author: Underscores.me
-Author URI: http://underscores.me/
-Description: Description
+Theme URI: https://vmel.dev
+Author: Valentyn Melnychenko
+Author URI: https://vmel.dev
+Description: Bespoke WordPress theme for Centrum Psychoterapii Forme, a Polish psychotherapy center. Hand-coded frontend (SCSS/JS, gulp build) integrated with ACF Pro for fully editable content.
 Version: 1.0.0
-Tested up to: 5.4
-Requires PHP: 5.6
+Requires at least: 5.9
+Tested up to: 6.5
+Requires PHP: 7.4
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: forme
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: custom-logo, custom-menu, featured-images, translation-ready
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned.
-
-Forme is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+The design styles compile from assets/src (SCSS) to assets/dist/css/style.css.
+This file holds the WordPress theme header and the blog/article styling.
 */
 
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Generic
-	- Normalize
-	- Box sizing
-# Base
-	- Typography
-	- Elements
-	- Links
-	- Forms
-## Layouts
-# Components
-	- Navigation
-	- Posts and pages
-	- Comments
-	- Widgets
-	- Media
-	- Captions
-	- Galleries
-# plugins
-	- Jetpack infinite scroll
-# Utilities
-	- Accessibility
-	- Alignments
-
---------------------------------------------------------------*/
 .post-container {
   max-width: 60rem;
   margin: 0 auto;
