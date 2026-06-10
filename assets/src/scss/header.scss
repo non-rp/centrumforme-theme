@@ -1,0 +1,214 @@
+//====================================================================================================
+
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+	display: none;
+
+	background: $green;
+
+	@media (max-width: $mobile) {
+		display: block;
+		// position: relative;
+		width: rem(37);
+		height: rem(37);
+		border-radius: 50%;
+		z-index: 5;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			left: 50%;
+			position: absolute;
+			width: rem(17);
+			height: rem(2);
+			background-color: #fff;
+			transform: translateX(-50%);
+		}
+		&::before {
+			top: calc(50% - rem(7));
+		}
+		&::after {
+			top: calc(50% - rem(1));
+		}
+		span {
+			top: calc(50% + rem(4));
+		}
+
+
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+				left: 30%;
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg) ;
+				left: 30%;
+			}
+		}
+	}
+}
+
+
+.header {
+
+	background: $bgColor;
+	margin-bottom: 45px;
+	
+	&__container {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("padding-top", 31, 14);
+		@include adaptiveValue("padding-bottom", 31, 14);
+		justify-content: space-between;
+	}
+
+
+	&__logo {
+		min-width: 97px;
+		@include adaptiveValue("max-width", 192, 97);
+		position: relative;
+		z-index: 2;
+		margin-right: 30px;
+	}
+
+	&__menu {
+
+	}
+
+	&__button {
+		text-align: center;
+
+		a {
+			padding: 11px 56px;
+			border: 3px solid $green;
+			border-radius: 9px;
+			@include adaptiveValue("padding-left", 56, 20);
+			@include adaptiveValue("padding-right", 56, 20);
+			transition: 0.3s ease-in;
+
+			@media (max-width:$mobile){
+				 width: 100%; 
+			}
+
+			@media (any-hover: hover){
+				&:hover{
+					color: #fff;
+					background: $green;
+					transition: 0.3s ease-in;
+				}
+			}
+
+			&::after {
+				display: none;
+			}
+		}
+		@include adaptiveValue("margin-left", 78, 0);
+
+		@media (max-width:$tablet){
+			margin-left: 10px;
+		}
+
+		@media (max-width:$mobile){
+			 margin-left: 0; 
+			 width: 90%;
+		}
+	}
+}
+.menu {
+
+	&__icon {
+		position: absolute;
+		right: 20px;
+		top: 14px;
+	}
+
+	&__body {
+
+		@media (max-width:$mobile){
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: -100%; 
+			background: #fff;
+			overflow-y: auto;
+			transition: left 0.7s ease-in-out;
+			padding-bottom: 50px;
+	   }
+
+	   .menu-open & {
+		left: 0;
+	   }
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+
+		@media (max-width:$mobile){
+			  flex-direction: column;
+			  justify-content: center;
+			  margin-top: 150px;
+		}
+	}
+
+	&__item {
+		text-align: center;
+	}
+
+	&__link {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 30px;
+		display: inline-block;
+		color:#000;
+		padding: 15px 25px;
+		@include adaptiveValue("padding-left", 25, 10);
+		@include adaptiveValue("padding-right", 25, 10);
+		position: relative;
+		overflow: hidden;
+
+		&::after {
+			content: '';
+			display: inline-block;
+			height: 2px;
+			width: 45%;
+			position: absolute;
+			bottom: -10px;
+			left: 50%;
+			transform: translateX(-50%);
+			background: $green;
+			transition: bottom 0.4s ease-in-out;
+		}
+
+		@media (any-hover: hover){
+			&:hover{
+
+				&::after {
+				bottom: 10px;
+				transition: bottom 0.4s ease-in-out;
+				}
+			}
+		}
+
+	}
+}
+.icon-menu {
+}
+
+

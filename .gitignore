@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Build artifacts / generated files
+*.css.map
+*.map
+../_s.zip
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor / IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# Logs & temp
+*.log
+*.tmp
+*.bak
+*~

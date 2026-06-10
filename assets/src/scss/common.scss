@@ -1,0 +1,80 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+body {
+    background: $bgColor;
+}
+
+.title {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    @include adaptiveValue("font-size", 48, 22);
+    @include adaptiveValue("line-height", 58, 27);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.description {
+    font-family: 'Didact Gothic';
+    font-style: normal;
+    font-weight: 400;
+    @include adaptiveValue("font-size", 22, 16);
+    @include adaptiveValue("line-height", 30, 22);
+    text-align: center;
+    color: #767676;
+}
+
+.button {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: $mainColor;
+    display: inline-block;
+    padding: 15px 46px;
+    border: 1px transparent;
+    border-radius: 9px;
+    text-align: center;
+}
+
+.--green {
+    background: $green;
+    border: 1px solid $green;
+}
+
+.--border {
+    border: 2px solid $green;
+    transition: 0.4s ease-in;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background: $green;
+            transition: 0.4s ease-in;
+        }
+    }
+}
+
+input,
+textarea,
+select {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 0.33);
+    padding: 10px 17px;
+
+    background: #EFEFEF;
+    border-radius: 9px;
+
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+textarea {
+    max-height: 85px;
+}
