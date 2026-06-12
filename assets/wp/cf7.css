@@ -1,0 +1,19 @@
+/* Contact Form 7 tweaks: hide the inline message (we use the success popup). */
+.wpcf7-response-output {
+	display: none;
+}
+
+/* Success popup (#popup-send) layout. */
+#popup-send .popup-appointmetn__content {
+	padding-bottom: 0;
+	max-width: 500px;
+}
+
+#popup-send .popup-appointmetn__info {
+	margin-top: 64px;
+	text-align: center;
+}
+
+#popup-send .title {
+	display: none;
+}

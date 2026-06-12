@@ -194,8 +194,6 @@ endif;
 	</div>
 </div>
 
-<div class="overlay" style="display: none;"></div>
-
 <?php wp_footer(); ?>
 
 </body>
