@@ -1,10 +1,11 @@
 # Forme — WordPress theme
 
 Bespoke WordPress theme for **Centrum Psychoterapii Forme**, a Polish psychotherapy
-center ([centrumforme.pl](https://www.centrumforme.pl)). The frontend was hand-coded
-as a static build and then integrated with WordPress + ACF Pro so the whole site is
-editable from the admin.
+center. The frontend was hand-coded as a static build and then integrated with
+WordPress + ACF Pro so the whole site is editable from the admin.
 
+> Originally built back in 2022; refactored into this clean, ACF-driven theme.
+>
 > Author: **Valentyn Melnychenko** — [vmel.dev](https://vmel.dev)
 
 ---
