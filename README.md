@@ -4,7 +4,7 @@ Bespoke WordPress theme for **Centrum Psychoterapii Forme**, a Polish psychother
 center. The frontend was hand-coded as a static build and then integrated with
 WordPress + ACF Pro so the whole site is editable from the admin.
 
-> Originally built back in 2022; refactored into this clean, ACF-driven theme.
+> A 2022 project.
 >
 > Author: **Valentyn Melnychenko** — [vmel.dev](https://vmel.dev)
 
