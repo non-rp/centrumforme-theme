@@ -1,14 +1,15 @@
 <?php
 /**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ * The header: document head and the opening site header / navigation.
  *
  * @package Forme
  */
 
+defined( 'ABSPATH' ) || exit;
+
+$forme_logo     = forme_option( 'logo' );
+$forme_logo_url = ! empty( $forme_logo['url'] ) ? $forme_logo['url'] : '/wp-content/uploads/2022/10/heade-logo.svg';
+$forme_logo_alt = ! empty( $forme_logo['alt'] ) ? $forme_logo['alt'] : get_bloginfo( 'name' );
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -25,21 +26,11 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
-				<a href="<?php echo home_url(); ?>" class="header__logo"><img src="/wp-content/uploads/2022/10/heade-logo.svg" alt=""></a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="header__logo"><img src="<?php echo esc_url( $forme_logo_url ); ?>" alt="<?php echo esc_attr( $forme_logo_alt ); ?>"></a>
 
 				<div class="header__menu menu">
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
-					<nav class="menu__body">
-						<ul class="menu__list">
-							<li class="menu__item"><a href="/psychoterapia" class="menu__link">Terapia</a></li>
-							<li class="menu__item"><a href="/dla-rodzicow" class="menu__link">Dla rodziców</a></li>
-							<li class="menu__item"><a href="/dla-nauczycieli" class="menu__link">Dla nauczycieli</a></li>
-							<li class="menu__item"><a href="/dla-terapeutow" class="menu__link">Dla terapeutów</a></li>
-							<li class="menu__item"><a href="/kategoria/aktualnosci" class="menu__link">Blog</a></li>
-							<li class="menu__item"><a href="#footer" class="menu__link">Kontakt</a></li>
-							<li class="menu__item header__button"><a href="/znajdz-terapeute" class="menu__link">Znajdź terapeutę</a></li>
-						</ul>
-					</nav>
+					<?php forme_nav_menu( 'primary' ); ?>
 				</div>
 			</div>
 		</header>

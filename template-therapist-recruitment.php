@@ -69,4 +69,4 @@ $forme_render_block = static function ( $group, $image, $reverse = false ) {
 $forme_render_block( $forme_offers, $forme_image_top, false );
 $forme_render_block( $forme_reqs, $forme_image_bot, true );
 
-get_footer( 'terapevtf' );
+get_footer();
