@@ -1800,6 +1800,105 @@ textarea {
   color: #000 !important;
 }
 
+.post-container {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+.post-wrapper {
+  margin-bottom: 5rem;
+}
+
+.post-title {
+  font-family: "Gilroy";
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  line-height: 2.5rem;
+}
+
+.post-meta,
+.post-description {
+  font-family: "Didact Gothic";
+  font-weight: 400;
+  line-height: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.post-meta {
+  text-align: center;
+  font-size: 18px;
+}
+
+.post-description p {
+  margin-bottom: 1.25rem;
+}
+
+.post-description h1,
+.post-description h2,
+.post-description h3,
+.post-description h4,
+.post-description h5,
+.post-description h6 {
+  line-height: 1.2;
+}
+
+.post-description h1 {
+  font-size: 3rem;
+  margin: 4rem 0;
+}
+
+.post-description h2 {
+  font-size: 2.5rem;
+  margin: 3rem 0;
+}
+
+.post-description h3 {
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+.post-description h4 {
+  font-size: 1.6rem;
+  margin: 1.25rem 0;
+}
+
+.post-description h5 {
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem;
+}
+
+.post-description h6 {
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+}
+
+.post-thumbnail img {
+  margin-bottom: 3rem;
+}
+
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+.nav-previous a,
+.nav-next a {
+  display: inline-block;
+  font-size: 18px;
+  padding: 11px 30px;
+  border: 3px solid #CBEAA6;
+  border-radius: 9px;
+}
+
 @media (min-width: 61.99875em) {
   .hero__title {
     min-width: 599px;
@@ -2077,6 +2176,60 @@ textarea {
 
   .reverse .side-by-side-50__container {
     gap: 8.8125rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .post-title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .post-tease-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    gap: 30px;
+    margin-bottom: 5rem;
+  }
+
+  .post-thumbnail img {
+    height: auto !important;
+    border-radius: 10px;
+  }
+
+  .post-tease-wrapper__img {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    width: 400px;
+  }
+
+  .post-tease-wrapper__content {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+
+  .post-tease-wrapper__content .post-title,
+  .post-tease-wrapper__content .post-meta {
+    text-align: left;
+  }
+
+  .post-tease-wrapper__img--placeholder {
+    background-color: #fff;
+    aspect-ratio: 16/9;
+  }
+}
+
+@media (min-width: 1200px) {
+  .post-title {
+    font-size: 3rem;
+    line-height: 3.625rem;
+  }
+
+  .post-tease-wrapper__img {
+    width: 600px;
   }
 }
 
