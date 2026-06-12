@@ -28,17 +28,17 @@ $forme_benefits = forme_field( 'benefits', false, array() );
 if ( empty( $forme_benefits ) ) {
 	$forme_benefits = array(
 		array(
-			'icon'        => array( 'url' => $forme_uploads . 'security.svg' ),
+			'icon'        => array( 'url' => forme_icon( 'security.svg' ) ),
 			'title'       => 'Bezpieczeństwo',
 			'description' => 'Platforma FORME wykorzystuje zabezpieczony komunikator Google Meet',
 		),
 		array(
-			'icon'        => array( 'url' => $forme_uploads . 'work-from-home.svg' ),
+			'icon'        => array( 'url' => forme_icon( 'work-from-home.svg' ) ),
 			'title'       => 'Komfort',
 			'description' => 'Rezerwuj sesję w dogodnych godzinach i łącz się z komfortowego miejsca',
 		),
 		array(
-			'icon'        => array( 'url' => $forme_uploads . 'goal.svg' ),
+			'icon'        => array( 'url' => forme_icon( 'goal.svg' ) ),
 			'title'       => 'Rezultat',
 			'description' => 'Ustalamy cel, do którego dążymy i konkretny plan działań',
 		),
@@ -73,12 +73,12 @@ $forme_session = forme_field( 'session_info', false, array() );
 if ( empty( $forme_session ) ) {
 	$forme_session = array(
 		array(
-			'icon'  => array( 'url' => $forme_uploads . 'clock.svg' ),
+			'icon'  => array( 'url' => forme_icon( 'clock.svg' ) ),
 			'label' => 'Czas trwania:',
 			'value' => '50 min',
 		),
 		array(
-			'icon'  => array( 'url' => $forme_uploads . 'coins.svg' ),
+			'icon'  => array( 'url' => forme_icon( 'coins.svg' ) ),
 			'label' => 'Cena:',
 			'value' => '180-270 pln',
 		),
@@ -283,11 +283,11 @@ $forme_inline = array( 'span' => array(), 'br' => array() );
 
 				<div class="call-to-action__items side-by-side-rev__items">
 					<div class="call-to-action__item">
-						<img src="<?php echo esc_url( $forme_uploads . 'clock-black.svg' ); ?>" alt="">
+						<img src="<?php echo esc_url( forme_icon( 'clock-black.svg' ) ); ?>" alt="">
 						<p>Czas trwania: <span>50 min</span></p>
 					</div>
 					<div class="call-to-action__item">
-						<img src="<?php echo esc_url( $forme_uploads . 'coins-black.svg' ); ?>" alt="">
+						<img src="<?php echo esc_url( forme_icon( 'coins-black.svg' ) ); ?>" alt="">
 						<p>Cena: <span>180-270 pln</span></p>
 					</div>
 				</div>
@@ -306,7 +306,7 @@ $forme_inline = array( 'span' => array(), 'br' => array() );
 					<div class="reviews__person">
 						<div class="reviews__img"><img src="<?php echo esc_url( $forme_r['photo']['url'] ); ?>" alt=""></div>
 						<p class="reviews__name"><?php echo esc_html( $forme_r['name'] ); ?></p>
-						<div class="reviews__quote-icon"><img src="<?php echo esc_url( $forme_uploads . 'quote-icon.svg' ); ?>" alt=""></div>
+						<div class="reviews__quote-icon"><img src="<?php echo esc_url( forme_icon( 'quote-icon.svg' ) ); ?>" alt=""></div>
 					</div>
 					<div class="reviews__desc description"><?php echo wp_kses_post( wpautop( $forme_r['text'] ) ); ?></div>
 				</div>

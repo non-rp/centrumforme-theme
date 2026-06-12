@@ -8,7 +8,7 @@
 defined( 'ABSPATH' ) || exit;
 
 $forme_logo     = forme_option( 'logo' );
-$forme_logo_url = ! empty( $forme_logo['url'] ) ? $forme_logo['url'] : '/wp-content/uploads/2022/10/heade-logo.svg';
+$forme_logo_url = ! empty( $forme_logo['url'] ) ? $forme_logo['url'] : forme_icon( 'heade-logo.svg' );
 $forme_logo_alt = ! empty( $forme_logo['alt'] ) ? $forme_logo['alt'] : get_bloginfo( 'name' );
 ?>
 <!doctype html>

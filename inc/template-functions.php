@@ -8,6 +8,19 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
+ * URL for a theme UI icon shipped in assets/dist/img.
+ *
+ * Used for chrome icons (clock, phone, etc.) so they live in the theme rather
+ * than depending on the media library. Content imagery stays in ACF/uploads.
+ *
+ * @param string $file Icon file name, e.g. 'clock.svg'.
+ * @return string
+ */
+function forme_icon( $file ) {
+	return FORME_URI . '/assets/dist/img/' . ltrim( $file, '/' );
+}
+
+/**
  * Add custom classes to the array of body classes.
  *
  * @param array $classes Classes for the body element.

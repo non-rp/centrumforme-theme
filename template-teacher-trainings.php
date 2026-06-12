@@ -21,15 +21,15 @@ get_header();
 			<div class="side-by-side-rev__wrap">
 				<ul class="side-by-side-rev__list">
 					<li class="side-by-side-rev__item side-icons__item">
-						<div class="side-icons__icon"><img src="/wp-content/uploads/2022/10/check-p-3.svg" alt=""></div>
+						<div class="side-icons__icon"><img src="<?php echo esc_url( forme_icon( 'check-p-3.svg' ) ); ?>" alt=""></div>
 						<?php esc_html_e( 'Przygotowane przez nas szkolenia odpowiadają na aktualne potrzeby nauczycieli oraz proponują konkretne sposoby pracy z uczniami.', 'forme' ); ?>
 					</li>
 					<li class="side-by-side-rev__item side-icons__item">
-						<div class="side-icons__icon"><img src="/wp-content/uploads/2022/10/check-p-3.svg" alt=""></div>
+						<div class="side-icons__icon"><img src="<?php echo esc_url( forme_icon( 'check-p-3.svg' ) ); ?>" alt=""></div>
 						<?php esc_html_e( 'Co zrobić, kiedy uczeń się okalecza? Jak postępować z dzieckiem, które ma depresję? Jak pracować z uczniem z zaburzeniami koncentracji uwagi, ADHD lub Zespołem Aspergera?', 'forme' ); ?>
 					</li>
 					<li class="side-by-side-rev__item side-icons__item">
-						<div class="side-icons__icon"><img src="/wp-content/uploads/2022/10/check-p-3.svg" alt=""></div>
+						<div class="side-icons__icon"><img src="<?php echo esc_url( forme_icon( 'check-p-3.svg' ) ); ?>" alt=""></div>
 						<?php esc_html_e( 'Jak radzić sobie ze stresem i frustracją w pracy nauczyciela?', 'forme' ); ?>
 					</li>
 				</ul>

@@ -25,7 +25,7 @@ get_header();
 		<div class="webinars__items">
 			<div class="webinars__item webinars-item">
 				<div class="webinars-item__top">
-					<div class="webinars-item__icon"><img src="/wp-content/uploads/2022/10/clock-reviews.svg" alt=""></div>
+					<div class="webinars-item__icon"><img src="<?php echo esc_url( forme_icon( 'clock-reviews.svg' ) ); ?>" alt=""></div>
 					<div class="webinars-item__info">
 						<a href="/zarezerwuj-wizyte">
 							<h3 class="webinars-item__name"><?php esc_html_e( 'Konsultacja online dla dorosłych', 'forme' ); ?></h3>
@@ -37,7 +37,7 @@ get_header();
 
 			<div class="webinars__item webinars-item">
 				<div class="webinars-item__top">
-					<div class="webinars-item__icon"><img src="/wp-content/uploads/2022/10/clock-reviews.svg" alt=""></div>
+					<div class="webinars-item__icon"><img src="<?php echo esc_url( forme_icon( 'clock-reviews.svg' ) ); ?>" alt=""></div>
 					<div class="webinars-item__info">
 						<a href="/zarezerwuj-wizyte">
 							<h3 class="webinars-item__name"><?php esc_html_e( 'Konsultacja online dla dzieci', 'forme' ); ?></h3>

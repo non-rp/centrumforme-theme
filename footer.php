@@ -16,7 +16,7 @@ $forme_social  = '/wp-content/uploads/2023/09/';
 
 /* Logo ------------------------------------------------------------------ */
 $forme_logo     = forme_option( 'logo' );
-$forme_logo_url = ! empty( $forme_logo['url'] ) ? $forme_logo['url'] : '/wp-content/uploads/2022/10/heade-logo.svg';
+$forme_logo_url = ! empty( $forme_logo['url'] ) ? $forme_logo['url'] : forme_icon( 'heade-logo.svg' );
 $forme_logo_alt = ! empty( $forme_logo['alt'] ) ? $forme_logo['alt'] : get_bloginfo( 'name' );
 
 /* Contact details ------------------------------------------------------- */
@@ -100,19 +100,19 @@ $forme_pp_content = ! empty( $forme_pp['content'] ) ? $forme_pp['content'] : '
 				<div class="footer__contacts footer-contact">
 					<?php if ( $forme_address ) : ?>
 						<div class="footer-contact__row">
-							<div class="footer-contact__icon"><img src="<?php echo esc_url( $forme_uploads . 'location.svg' ); ?>" alt=""></div>
+							<div class="footer-contact__icon"><img src="<?php echo esc_url( forme_icon( 'location.svg' ) ); ?>" alt=""></div>
 							<span><?php echo esc_html( $forme_address ); ?></span>
 						</div>
 					<?php endif; ?>
 					<?php if ( $forme_phone ) : ?>
 						<div class="footer-contact__row">
-							<div class="footer-contact__icon"><img src="<?php echo esc_url( $forme_uploads . 'phone-call.svg' ); ?>" alt=""></div>
+							<div class="footer-contact__icon"><img src="<?php echo esc_url( forme_icon( 'phone-call.svg' ) ); ?>" alt=""></div>
 							<span class="contact-item"><a href="tel:<?php echo esc_attr( $forme_tel ); ?>"><?php echo esc_html( $forme_phone ); ?></a></span>
 						</div>
 					<?php endif; ?>
 					<?php if ( $forme_email ) : ?>
 						<div class="footer-contact__row">
-							<div class="footer-contact__icon"><img src="<?php echo esc_url( $forme_uploads . 'email.svg' ); ?>" alt=""></div>
+							<div class="footer-contact__icon"><img src="<?php echo esc_url( forme_icon( 'email.svg' ) ); ?>" alt=""></div>
 							<span class="contact-item"><a href="mailto:<?php echo esc_attr( $forme_email ); ?>"><?php echo esc_html( $forme_email ); ?></a></span>
 						</div>
 					<?php endif; ?>
@@ -157,8 +157,8 @@ $forme_pp_content = ! empty( $forme_pp['content'] ) ? $forme_pp['content'] : '
 			<div class="popup-instruction__title title"><?php echo esc_html( $forme_pp_title ); ?></div>
 			<div class="popup-instruction__text"><?php echo wp_kses_post( $forme_pp_content ); ?></div>
 		</div>
-		<img class="popup-instruction__bg" src="<?php echo esc_url( $forme_uploads . 'popup-bg.svg' ); ?>" alt="">
-		<img class="popup-instruction__bg" src="<?php echo esc_url( $forme_uploads . 'popup-bg.svg' ); ?>" alt="">
+		<img class="popup-instruction__bg" src="<?php echo esc_url( forme_icon( 'popup-bg.svg' ) ); ?>" alt="">
+		<img class="popup-instruction__bg" src="<?php echo esc_url( forme_icon( 'popup-bg.svg' ) ); ?>" alt="">
 	</div>
 </div>
 
@@ -183,7 +183,7 @@ endif;
 <div id="popup-send" class="popup-appointmetn popup-webinary">
 	<div class="popup-appointmetn__wrapper">
 		<div class="popup-appointmetn__content popup__content">
-			<button data-close type="button" class="popup-appointmetn__close"><img src="<?php echo esc_url( $forme_uploads . 'popup-close.svg' ); ?>" alt=""></button>
+			<button data-close type="button" class="popup-appointmetn__close"><img src="<?php echo esc_url( forme_icon( 'popup-close.svg' ) ); ?>" alt=""></button>
 			<h3 class="popup-appointmetn__title title"><?php esc_html_e( 'Informacje', 'forme' ); ?></h3>
 			<div class="popup-appointmetn__info">
 				<div class="popup-appointmetn__column popup-column">

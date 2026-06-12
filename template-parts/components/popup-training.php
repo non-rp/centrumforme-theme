@@ -20,7 +20,7 @@ $forme_webinar = ( 'webinar' === $forme_type );
 <div id="popup-training-<?php the_ID(); ?>" class="popup-appointmetn<?php echo $forme_webinar ? ' popup-webinary' : ''; ?>">
 	<div class="popup-appointmetn__wrapper">
 		<div class="popup-appointmetn__content popup__content">
-			<button data-close type="button" class="popup-appointmetn__close"><img src="/wp-content/uploads/2022/10/popup-close.svg" alt=""></button>
+			<button data-close type="button" class="popup-appointmetn__close"><img src="<?php echo esc_url( forme_icon( 'popup-close.svg' ) ); ?>" alt=""></button>
 			<h3 class="popup-appointmetn__title title"><?php echo esc_html( get_the_title() ); ?></h3>
 
 			<div class="popup-appointmetn__info">
@@ -37,7 +37,7 @@ $forme_webinar = ( 'webinar' === $forme_type );
 							<ul class="popup-column__check">
 								<?php foreach ( $forme_goals as $forme_goal ) : ?>
 									<li class="popup-column__item">
-										<div class="popup-column__icon"><img src="/wp-content/uploads/2022/10/popup-check.svg" alt=""></div>
+										<div class="popup-column__icon"><img src="<?php echo esc_url( forme_icon( 'popup-check.svg' ) ); ?>" alt=""></div>
 										<?php echo esc_html( $forme_goal['text'] ); ?>
 									</li>
 								<?php endforeach; ?>

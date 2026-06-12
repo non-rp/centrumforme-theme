@@ -10,7 +10,7 @@ defined( 'ABSPATH' ) || exit;
 
 $forme_icon = has_post_thumbnail()
 	? get_the_post_thumbnail_url( get_the_ID(), 'thumbnail' )
-	: '/wp-content/uploads/2022/10/webinars.svg';
+	: forme_icon( 'webinars.svg' );
 ?>
 <div class="webinars__item webinars-item">
 	<div class="webinars-item__top">
