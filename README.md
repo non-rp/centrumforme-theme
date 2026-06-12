@@ -69,11 +69,18 @@ assets/                       frontend source (src) + compiled build (dist)
 5. Create a menu and assign it to the **Primary** (and optionally **Footer**) location.
 6. Set the static front page to the page using `front-page.php`.
 
-## Frontend build (optional)
+## Frontend build
 
-The compiled assets are committed, so a build is only needed when changing styles/scripts.
-The pipeline lives in `assets/config` (Gulp tasks + Webpack); source is in `assets/src`,
-output in `assets/dist`.
+Compiled assets are committed, so a build is only needed when changing styles/scripts.
+The FLS Gulp + Webpack pipeline lives in `assets/` (source in `assets/src`, config in
+`assets/config`, output in `assets/dist`):
+
+```bash
+cd assets
+npm install        # first time (uses --legacy-peer-deps via `npm run start`)
+npm run dev        # watch + webpack dev server
+npm run build      # production build into assets/dist
+```
 
 ## License
 
